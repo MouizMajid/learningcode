@@ -1,0 +1,52 @@
+/* Basic body text styling */
+body {
+   background-color: rgb(22, 22, 22);  
+  font-family: Arial, sans-serif;     /* Changes the font */
+  font-size: 16px;                    /* Size of the text */
+  line-height: 1.5;                   /* Space between lines */
+  margin: 40px;                       /* Space around the edges */
+}
+
+button{
+  display: block;
+  width: 100%; 
+  margin-bottom: 10px;
+  background-color: rgb(92, 92, 92); /* Button background color */
+  font-weight: bold;
+    font-size: 16px;                    /* Size of the text */
+
+  color: rgb(255, 255, 255);          /* Button text color */
+  border: none;                       /* No border */
+  padding: 10px 20px;                /* Padding inside the button */
+  border-radius: 5px;                /* Rounded corners */
+  cursor: pointer;                    /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: rgb(255, 205, 141);   
+  color: rgb(0, 0, 0);      /* Darker blue on hover */
+  transform: translateY(-2px);      /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* Drop shadow */
+  transition: all 0.3s ease
+}
+
+.centered-div {
+  position: fixed;
+    color: rgb(255, 254, 253); ;                     /* Text color (dark gray) */
+  text-align: center;              /* Centers text inside the div */
+  background-color: rgb(59, 59, 59); 
+  padding: 20px;   
+  border-radius: 15px;
+   top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+img {
+  width: 250px;
+  height: 250px;             /* Makes image fit the div width */
+  border-radius: 10px;     /* Rounded corners */
+  margin-bottom: 15px;     /* Space below image */
+  border-radius: 50%;
+  object-fit: cover;
+}
