@@ -1,0 +1,12 @@
+.grid{
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+}
+body{
+    background-color: rgb(49, 49, 49);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color : white;
+}   
