@@ -2,17 +2,29 @@
 
     width: 200px;
     height: 200px;
-    border-style: solid;
-    border-color: black;
+    
 
 }
+
+body {
+    background-color: rgb(27, 15, 9);
+}
 .grid {
+    background-color: rgb(59, 59, 59); 
+    border-radius: 25px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
     width: 618px;
     height: 618px;
+    margin: 0 auto;
+}
+.container{
+    text-align: center;
+    color: rgb(218, 218, 218);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
 }
 
 .mole {
@@ -20,3 +32,4 @@
     background-size: cover;
 
 }
+
