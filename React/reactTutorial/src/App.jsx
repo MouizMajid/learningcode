@@ -1,23 +1,17 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { Fragment } from 'react'
-import Header from './Header.jsx'
-import Main from './mainbody.jsx'
-import Footer from './Footer.jsx'
+import NavBar from './components/Navbar.jsx'
+import Main from './components/Mainbody.jsx'
 
 // const root = createRoot(document.getElementById('root'))
 
-
-
-
-
-function MyComponent() {
+function App() {
   return (<div className="main">
-    <Header />
+    <NavBar />
     <Main />
-    <Footer />
   </div>)
 }
 
 
-export default MyComponent
+export default App
