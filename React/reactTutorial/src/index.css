@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(226, 226, 226, 0.87);
-  background-color: #242424;
+  background-color: hsl(0, 30%, 95%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,25 +16,78 @@
 
 
 .main {
-  max-width: 800px;
+  max-width: 800px; 
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 .mainbody{
-  color: rgb(228, 228, 228);
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   text-align: left;
   line-height: 1.6;
   padding: 10px 20px;
-  background-image: url(./assets/react.svg);
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
+
 }
-.mainbody>h1{
+.component {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+    width: 100%;
+
+}
+
+.component img {
+  width: 160px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.component > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.component h2 {
+  color: #2B283A;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin: 0;
 }
+.component h1 {
+  color: #2B283A;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.2;
+}
+.component > p{
+  font-weight: bold;
+  color: rgba(180, 110, 70, 0.336);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.date{
+  color: #2B283A;
+  font-weight: bold;
+  margin: 0;
+}
+.component a {
+  color: #918E9B;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  width: fit-content;
+}
+.component p:last-child {
+  color: #2B283A;
+  line-height: 1.5;
+  margin: 0;
+}
+
 .factslist{
   margin-top: 45px;
   max-width: 400px;
@@ -44,32 +97,26 @@
   padding-left: 20px;
   position: relative;
 }
-.factslist > li::marker{
-  color: rgb(41, 179, 184);
-  font-size: 1.5rem;
 
-}
 .header{
   height: 90px;
   width: 100%;
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(248, 48, 81);
   padding: 0px 20px;
   border-radius: 10px;
-
-}
-.navbar {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: bold;
-  height: 100%;
 
 }
+
 .title{
-  color: rgb(41, 179, 184);
+  color: white;
   font-size: 2rem;
 }
 .navbar > img{
-  width: 50px;
+  width: 40px;
   margin-right: 15px;
 
 }
