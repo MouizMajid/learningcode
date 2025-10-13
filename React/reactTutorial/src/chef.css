@@ -1,0 +1,134 @@
+.landing {
+    font-family: 'Figtree', sans-serif;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title > img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.title > h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.searchBar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.searchBar input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.searchBar input[type="text"]:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.searchBar input[type="submit"] {
+    padding: 12px 24px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.searchBar input[type="submit"]:hover {
+    background-color: #5a5a5a;
+}
+
+.landing > ul {
+    /* list-style-type: disc; */
+        list-style-position: inside;
+
+    padding-left: 20px;
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.landing ul::before {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    margin-left: -20px;
+}
+
+.landing li {
+        padding: 5px 20px;  /* Add left padding to list items instead */
+
+    margin: 8px 0;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    /*      display: flex; */
+    align-items: center;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.getRecipe {
+    background-color: #b6b6b6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.getRecipe .text-content {
+    text-align: left;
+}
+
+.getRecipe h2 {
+    margin: 0 0 5px 0;
+}
+
+.getRecipe p {
+    margin: 0;
+}
+
+.getRecipe button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.getRecipe button:hover {
+    background-color: #ff5252;
+}
