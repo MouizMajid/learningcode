@@ -1,17 +1,19 @@
 import React from 'react'
 
 function Landing() {
-    const ingredients = ["1 cup of flour", "2 eggs", "1/2 cup of sugar"];
+
+    const [ingredients, setIngredients] = React.useState(["1 cup a", "2 eggs", "1/2 cup of sugar"]);
+
     const ingredientList = ingredients.map((item, index) => <li key={index} >{item}</li>)
+    
     
 
     function handleSubmit(event) {
         event.preventDefault();
         const formdata = new FormData(event.currentTarget);
         const newIngredient = formdata.get("ingredient");
-        console.log(newIngredient);
-        ingredients.push(newIngredient);
-        console.log(ingredients);
+        setIngredients(prevState => [...prevState, newIngredient]);
+        
     }
     return(
         <div className="landing">
@@ -31,7 +33,6 @@ function Landing() {
             </div>
         </div>
     )
-
 }
 
 export default Landing

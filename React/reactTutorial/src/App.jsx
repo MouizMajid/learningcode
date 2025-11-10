@@ -18,8 +18,7 @@ function App() {
 
 
   return (<div className="main">
-    {/* <NavBar />
-    {places} */}
+    
     <Header/>
     <Landing/>
     
