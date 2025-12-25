@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(226, 226, 226, 0.87);
-  background-color: hsl(0, 30%, 95%);
+  color: rgba(199, 18, 6, 0.932);
+  background-color: hsl(235, 39%, 12%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,7 +37,10 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
-    width: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;   /* <── stack items vertically */
+  align-items: center;      
 
 }
 
@@ -47,9 +50,13 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.component > .dices {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+}
 .component > div {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 8px;
 }
 .component h2 {
@@ -67,7 +74,7 @@
 }
 .component > p{
   font-weight: bold;
-  color: rgba(180, 110, 70, 0.336);
+  color: rgba(48, 20, 3, 0.6);
   text-decoration: none;
   margin-bottom: 10px;
 }
@@ -101,7 +108,7 @@
 .header{
   height: 90px;
   width: 100%;
-  background-color: rgb(248, 48, 81);
+  background-color: rgb(0, 62, 104);
   padding: 0px 20px;
   border-radius: 10px;
   display: flex;
@@ -142,29 +149,50 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: rgb(226, 226, 226)
+  color: rgb(243, 255, 253)
 }
 
+
+
 button {
+  color: black;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  /* padding: 0.6em 1.2em; */
+  font-size: 1.5em;
+  font-weight: bold;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #dad8d2;
   cursor: pointer;
   transition: border-color 0.25s;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+
+}
+.roll{
+  background-color: #93ebc9;
+  height: 50px;
+  width: 200px;
+}
+.won { 
+  background-color: #6b88e7;
+  height: 50px;
+  width: 200px;
+}
+.held {
+    background-color: #8dda7a;
+
 }
 
 button:hover {
   border-color: #646cff;
 }
-
+/* 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

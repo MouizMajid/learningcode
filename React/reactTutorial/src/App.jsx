@@ -1,15 +1,12 @@
-
-import Landing from './components/Landing.jsx'
-import Header from './components/Header.jsx'
+import Header from './comps2/Header.jsx'
+import Main from './comps2/Main.jsx'
+import Start from './comps3/Start.jsx'
 
 function App() {
 
-
   return (<div className="main">
-    
-    <Header/>
-    <Landing/>
-    
+    <Start/>
+
   </div>)
 }
 
