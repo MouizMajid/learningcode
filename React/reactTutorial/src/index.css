@@ -1,210 +1,203 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(199, 18, 6, 0.932);
-  background-color: hsl(235, 39%, 12%);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
 }
 
 
 
-.main {
-  max-width: 800px; 
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-}
-.mainbody{
-  color: rgb(0, 0, 0);
-  font-size: 1.2rem;
-  text-align: left;
-  line-height: 1.6;
-  padding: 10px 20px;
-
-}
-.component {
-  display: flex;
-  gap: 20px;
+body {
+  margin: 0;
+  font-family:'Hanken Grotesk', Arial, sans-serif;
+  background-color: rgb(38,38,38);
+  color: #d9d9d9;
   padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  width: 100%;
-  justify-content: center;
-  flex-direction: column;   /* <── stack items vertically */
-  align-items: center;      
-
-}
-
-.component img {
-  width: 160px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.component > .dices {
-  display: grid;
-  grid-template: auto auto / repeat(5, 1fr);
-}
-.component > div {
+  height: 100vh;
   display: flex;
-  /* flex-direction: column; */
-  gap: 8px;
+    justify-content: center;
+
+
 }
-.component h2 {
-  color: #2B283A;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.full{ 
+    
+    max-width: 500px; 
+    
+}
+
+header {
+  
+  text-align: center;
+  
+}
+
+header > h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #e5ddcf;
+}
+
+header > p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #acacac;
+}
+
+.status {
+  
+  text-align: center; 
+  background-color: #10a95b;
+  padding: 5px;
+  width: 70%;
+  border-radius: 6px ;
+  margin: 0 auto;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+
+}
+.status h2,
+.status p {
   margin: 0;
 }
-.component h1 {
-  color: #2B283A;
-  font-size: 2rem;
-  margin: 0;
+.status h2 {
+  
+  margin-top: 4px; 
+
+  margin-bottom: 6px; 
+  line-height: 1.1;
+}
+
+.status p {
   line-height: 1.2;
 }
-.component > p{
-  font-weight: bold;
-  color: rgba(48, 20, 3, 0.6);
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-.date{
-  color: #2B283A;
-  font-weight: bold;
-  margin: 0;
-}
-.component a {
-  color: #918E9B;
-  font-size: 0.8rem;
-  text-decoration: underline;
-  width: fit-content;
-}
-.component p:last-child {
-  color: #2B283A;
-  line-height: 1.5;
-  margin: 0;
-}
+.lcont{
 
-.factslist{
-  margin-top: 45px;
-  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: 25px;
 }
-.factslist > li{
-  margin-bottom: 10px;
-  padding-left: 20px;
+.langs {
+
+  padding: 6px;
+  border-radius: 4px;
+  margin: 3px;
+    font-size: 1.1rem;
   position: relative;
+
+  max-width: 300px;
 }
 
-.header{
-  height: 90px;
-  width: 100%;
-  background-color: rgb(0, 62, 104);
-  padding: 0px 20px;
-  border-radius: 10px;
+.langs.lost::before {
+  content: "💀";
+  position: absolute;
+  inset: 0; 
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-
-}
-
-.title{
-  color: white;
-  font-size: 2rem;
-}
-.navbar > img{
-  width: 40px;
-  margin-right: 15px;
-
+  background-color: rgba(0, 0, 0, 0.75);
+  font-size: 1.2rem;
+  border-radius: inherit; /* keeps pill shape */
 }
 
 
+.word{
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px; 
 }
 
-a:hover {
-  color: #535bf2;
-}
+.letter{
 
- body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  color: rgb(243, 255, 253)
-}
-
-
-
-button {
-  color: black;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  /* padding: 0.6em 1.2em; */
-  font-size: 1.5em;
-  font-weight: bold;
-  font-family: inherit;
-  background-color: #dad8d2;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  margin: 2px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: #141414;
+  border-bottom: 2px solid #e5ddcf;
   height: 50px;
   width: 50px;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard{
+
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; 
+  flex-wrap: wrap; 
 
 }
-.roll{
-  background-color: #93ebc9;
+
+.keys{
+  margin: 2px;
+  font-size: 1.6rem;
+  color: #000000;
+  background-color: #d4b03a;
   height: 50px;
-  width: 200px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-bottom: 2px solid rgba(0,0,0,0.35);
+  border-radius: 8px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.25);
+  transition: transform 0.05s ease, filter 0.15s ease;
 }
-.won { 
-  background-color: #6b88e7;
-  height: 50px;
-  width: 200px;
+.keys.correct{
+    background-color: #5cd34c;
 }
-.held {
-    background-color: #8dda7a;
-
+.keys.wrong{
+    background-color: #ff602f;
+}
+.keys:hover {
+  filter: brightness(1.1);
 }
 
-button:hover {
-  border-color: #646cff;
+.keys.correct,
+.keys.wrong {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: brightness(0.95);
 }
-/* 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 
-  a:hover {
-    color: #747bff;
-  }
 
-  button {
-    background-color: #f9f9f9;
-  }
+.keys:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+
+.keys:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.55);
+  outline-offset: 2px;
+}
+
+.end{
+  text-align: center; 
+  background-color: #27a5ee;
+  padding: 5px;
+  width: 50%;
+  border-radius: 6px ;
+  margin: 0 auto;
+  cursor: pointer;
+  
+  display: block;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.end:hover {
+  filter: brightness(1.1);
+}
+
+.end:active {
+  transform: scale(0.98);
 }
