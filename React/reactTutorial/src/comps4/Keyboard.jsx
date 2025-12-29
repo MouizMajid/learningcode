@@ -7,12 +7,13 @@ function Keyboard(props){
     const arr = "abcdefghijklmnopqrstuvwxyz".split("");
     const keys = arr.map((char, index) => {
         const guessed = props.guess.includes(char);
+        
         const inWord = props.word.includes(char);
 
         return <button 
         key={index} 
-        disabled={guessed}
-        className={clsx("keys", {correct: guessed&&inWord, wrong: guessed&&!inWord})} 
+        disabled={guessed || props.gameOver}
+        className={clsx("keys", {correct: guessed&&inWord, wrong: guessed&&!inWord, dis: guessed||props.gameOver})} 
         onClick={() => props.stroke(char)}>
             
             {char.toUpperCase()}

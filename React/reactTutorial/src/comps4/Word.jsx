@@ -9,8 +9,8 @@ function Word(props){
         const right = props.guess.includes(char);
         return ( <span 
         key={index} 
-        className="letter">
-            {right? char.toUpperCase(): " "}
+        className={clsx("letter", {answer: props.gameLost&&!right})}>
+            { (right || props.gameLost) ? char.toUpperCase(): " "}
         </span> )
     } )
 
