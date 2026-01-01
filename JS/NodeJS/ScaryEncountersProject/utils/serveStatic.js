@@ -1,11 +1,32 @@
-/*
-Challenge 2:
 
-1. Create and export a function called 'serveStatic'. 
-   It should take in the base directory as a parameter.
+// serveStatic.js
+import path from 'node:path'
+import fs from 'node:fs/promises'
+import {sendResponse} from './sendResponse.js'
+import { getContentType } from './getContentType.js';
 
-2. Build a path to index.html in the 'public' folder and save it to a const 'filePath'. 
-   (Which node module will you need to import to do this? Which method joins the path together?)
+export async function serveStatic(req, res, dir){
 
-3. Log 'filePath' to the console.
-*/
+    const publicPath = path.join(dir, 'public')
+
+    const filePath = path.join(publicPath,
+        (req.url==='/' ? 'index.html': req.url)
+     );
+    const ext = path.extname(filePath)
+    const ct = getContentType(ext);
+    try{
+        const content = await fs.readFile(filePath);
+        sendResponse(content, res, 200, ct)
+    }catch(err){
+
+        if(err.code === "ENOENT"){
+            const content = await fs.readFile(path.join(publicPath, '404.html'));
+            sendResponse(content, res, 404, 'text/html')
+        }else{  
+            sendResponse("<h1>Other error</h1>", res, 500, 'text/html')
+        }
+
+    }
+
+
+}
