@@ -3,7 +3,10 @@
 import { getData } from "../utils/getData.js"
 import { sendResponse } from "../utils/sendResponse.js"
 import { parseJSONBody } from "../utils/parseJSONBody.js"
-
+import { addNewSighting } from "../utils/addNewSighting.js"
+import { sanitizeData } from "../utils/sanitizeData.js"
+import { sightingEmitter } from "../events/sightingEvents.js"
+import { createAlert } from "../utils/createAlert.js"
 
 export async function handleGet(res){
     const arr = await getData()
@@ -17,8 +20,10 @@ export async function handleGet(res){
 export async function handlePost(req, res) {
     try{
         const parsedBody = await parseJSONBody(req)
-        await addNewSighting(parsedBody)
-        sendResponse(JSON.stringify(parsedBody), res, 201, 'application/json')
+        const cleanData = sanitizeData(parsedBody)
+        await addNewSighting(cleanData)
+        sightingEmitter.emit('sighting-added', cleanData)
+        sendResponse(JSON.stringify(cleanData), res, 201, 'application/json')
 
     } catch(err){
         sendResponse(JSON.stringify({error: err}), res, 400, 'application/json')

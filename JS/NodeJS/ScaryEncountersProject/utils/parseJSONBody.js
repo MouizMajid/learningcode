@@ -9,7 +9,6 @@ export async function parseJSONBody(req){
 
     try{
         const bodyObj = JSON.parse(body);
-        console.log("parse success")
         return bodyObj
     }catch (err){
         throw new Error("invalid json format" + err)
