@@ -1,6 +1,7 @@
 import {EventEmitter} from 'node:events'
-import { createAlert } from '../utils/createAlert'
+import { createAlert } from '../utils/createAlert.js'
+
+
 
 export const sightingEmitter = new EventEmitter()
-
 sightingEmitter.on('sighting-added', createAlert)

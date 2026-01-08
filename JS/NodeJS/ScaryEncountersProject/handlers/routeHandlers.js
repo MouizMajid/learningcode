@@ -6,7 +6,7 @@ import { parseJSONBody } from "../utils/parseJSONBody.js"
 import { addNewSighting } from "../utils/addNewSighting.js"
 import { sanitizeData } from "../utils/sanitizeData.js"
 import { sightingEmitter } from "../events/sightingEvents.js"
-import { createAlert } from "../utils/createAlert.js"
+import {stories } from "../data/stories.js"
 
 export async function handleGet(res){
     const arr = await getData()
@@ -29,11 +29,28 @@ export async function handlePost(req, res) {
         sendResponse(JSON.stringify({error: err}), res, 400, 'application/json')
     }
 
-/*
-Challenge 2:
-  1. Create a const 'rawBody' to store whatever is returned by parseJSONBody()
-  2. For now, log 'rawBody'.
-  3. Input an entry on the front end to test.
-*/
+}
+
+export async function handleNews(req, res) {
+  res.statusCode = 200
+
+  res.setHeader("Content-Type", "text/event-stream")
+  res.setHeader("Cache-Control", "no-cache")
+  res.setHeader("Connection", "keep-alive")
+
+
+
+  setInterval(() => {
+    let randomIndex = Math.floor(Math.random() * stories.length)
+
+    res.write(
+      `data: ${JSON.stringify({
+        event: 'news-update',
+        story: stories[randomIndex]
+      })}\n\n`
+    )
+
+
+  }, 3000)
 
 }
